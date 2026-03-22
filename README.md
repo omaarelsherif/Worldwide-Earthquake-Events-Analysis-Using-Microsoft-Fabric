@@ -1,6 +1,4 @@
-# Worldwide-Earthquake-Events-Tracking-Using-Microsoft-Fabric
-
-# 🌍 Earthquake Data Pipeline — Microsoft Fabric
+# Worldwide Earthquake Events Analsis Using Microsoft Fabric
 
 An end-to-end **Data Engineering project** built using **Microsoft Fabric**, implementing a full **Medallion Architecture (Bronze → Silver → Gold)** with **CI/CD using Fabric Deployment Pipelines**.
 
@@ -49,11 +47,6 @@ This project ingests real-time earthquake data from the **USGS API**, processes 
 The below diagram shows project architecture
 
 ---
-
-## 🔁 CI/CD — Deployment Pipeline
-
-This project implements **CI/CD using Fabric Deployment Pipelines** across three environments as below snapshot:
-
 
 ## 🥉 Bronze Layer — Ingestion
 
@@ -116,6 +109,12 @@ Power BI dashboard built on top of Gold layer.
 * 🎚️ Date range slider
 * 🎚️ Significance filter
 * 📈 Interactive insights
+
+---
+
+## 🔁 CI/CD — Deployment Pipeline
+
+This project implements **CI/CD using Fabric Deployment Pipelines** across three environments as below snapshot:
 
 ---
 
