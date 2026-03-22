@@ -98,7 +98,7 @@ Fabric **Data Factory Pipeline** orchestrates execution:
 ✔️ Dynamic & reusable pipeline
 
 The below screenshot shows the pipeline:
-<img src="Screenshots/Pipeline.png"/>
+<img src="Screenshots/Pipeline.PNG"/>
 
 ---
 
