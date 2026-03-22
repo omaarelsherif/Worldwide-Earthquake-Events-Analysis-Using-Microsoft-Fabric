@@ -1,13 +1,16 @@
 # Worldwide-Earthquake-Events-Tracking-Using-Microsoft-Fabric
 
+# 🌍 Earthquake Data Pipeline — Microsoft Fabric
+
 An end-to-end **Data Engineering project** built using **Microsoft Fabric**, implementing a full **Medallion Architecture (Bronze → Silver → Gold)** with **CI/CD using Fabric Deployment Pipelines**.
 
+---
 
-## Overview
+## 🚀 Overview
 
 This project ingests real-time earthquake data from the **USGS API**, processes it through layered transformations, and delivers interactive insights via Power BI.
 
-### Highlights:
+### 🔑 Highlights:
 
 * API-based ingestion (real-world scenario)
 * Medallion architecture using Lakehouse
@@ -16,91 +19,48 @@ This project ingests real-time earthquake data from the **USGS API**, processes 
 * CI/CD using Deployment Pipelines (Dev → Test → Prod)
 * Interactive reporting with filters and map visualization
 
-## Architecture
-
-The below diagram shows project architecture
-
-
-## CI/CD — Deployment Pipeline
-
-This project implements **CI/CD using Fabric Deployment Pipelines** across three environments:
-
-```id="cicd123"
-Dev Workspace  →  Test Workspace  →  Prod Workspace
-```
-
-### 🏗️ Environments:
-
-* **🧪 Dev**
-
-  * Development & experimentation
-  * Notebook changes & testing
-
-* **🔍 Test**
-
-  * Validation & QA
-  * Ensures pipeline stability
-
-* **🚀 Prod**
-
-  * Production-ready environment
-  * Connected to reporting layer
-
----
-
-### ⚙️ Deployment Process:
-
-* Assets developed in **Dev workspace**
-* Promoted to **Test workspace** for validation
-* Deployed to **Prod workspace** for final usage
-
-### ✅ Deployed Assets:
-
-* Notebooks
-* Data Pipeline
-* Lakehouse
-* Environment
-* Semantic Model & Report
-
-✔️ Ensures consistency across environments
-✔️ Enables controlled releases
-
 ---
 
 ## 🗂️ Repository Structure
 
 ```id="repo123"
-📦 earthquake-fabric-project
+📦 Main
  ┣ 📂 Notebooks
- ┃ ┣ 📜 01_bronze_ingestion.ipynb
- ┃ ┣ 📜 02_silver_transformation.ipynb
- ┃ ┗ 📜 03_gold_layer.ipynb
+ ┃ ┣ 📜 Earthquake Events API - Bronze Layer.ipynb
+ ┃ ┣ 📜 Earthquake Events API - Silver Layer.ipynb
+ ┃ ┗ 📜 Earthquake Events API - Gold Layer.ipynb
  ┣ 📂 Pipeline
- ┃ ┗ 📜 data_factory_pipeline.json
- ┣ 📂 Environment
- ┃ ┗ 📜 fabric_environment.json
- ┣ 📂 Lakehouse
- ┃ ┗ 📜 lakehouse_definition.json
+ ┃ ┗ 📜 Earthquake Data Pipeline.zip
  ┣ 📂 Report
- ┃ ┗ 📜 earthquake_report.pbix
+ ┃ ┗ 📜 Worldwide Earthquakes Events.pbix
  ┣ 📂 Raw Data
- ┃ ┗ 📜 earthquake_raw.json
+ ┃ ┗ 📜 2026-03-21_earthquake_data.json
  ┣ 📂 Screenshots
- ┃ ┣ 📸 pipeline.png
- ┃ ┣ 📸 report.png
- ┃ ┗ 📸 deployment_pipeline.png
+ ┃ ┣ 📸 Architecture.png
+ ┃ ┣ 📸 Pipeline.png
+ ┃ ┣ 📸 Report.png
+ ┃ ┗ 📸 Deployment_pipeline.png
  ┗ 📜 README.md
 ```
 
 ---
 
+## 🧱 Architecture
+The below diagram shows project architecture
+
+---
+
+## 🔁 CI/CD — Deployment Pipeline
+
+This project implements **CI/CD using Fabric Deployment Pipelines** across three environments as below snapshot:
+
+
 ## 🥉 Bronze Layer — Ingestion
 
 * Source: **USGS Earthquake API**
-* Tool: Fabric Notebook (PySpark)
+* Tool: Fabric Notebook (Python Requests)
 
 ✔️ Stores raw JSON data in Lakehouse
-✔️ Preserves original format for replay
 
 ---
 
@@ -146,25 +106,6 @@ Fabric **Data Factory Pipeline** orchestrates execution:
 
 ---
 
-## ⚙️ Environment
-
-Custom Fabric **Environment**:
-
-* Dependency management
-* Consistent execution across environments
-
----
-
-## 🗄️ Lakehouse
-
-* Central storage using **OneLake**
-* Stores:
-
-  * Raw files (Bronze)
-  * Delta tables (Silver & Gold)
-
----
-
 ## 📊 Reporting
 
 Power BI dashboard built on top of Gold layer.
@@ -178,49 +119,6 @@ Power BI dashboard built on top of Gold layer.
 
 ---
 
-## 🖼️ Screenshots
-
-### 🔄 Pipeline Execution
-
-![Pipeline](Screenshots/pipeline.png)
-
-### 🔁 Deployment Pipeline
-
-![Deployment](Screenshots/deployment_pipeline.png)
-
-### 📊 Power BI Dashboard
-
-![Report](Screenshots/report.png)
-
----
-
-## 🛠️ Tech Stack
-
-* **Microsoft Fabric**
-
-  * Lakehouse
-  * Notebooks (PySpark)
-  * Data Factory Pipeline
-  * Deployment Pipeline (CI/CD)
-  * Environment
-* **Delta Lake**
-* **REST API (USGS)**
-* **Power BI**
-
----
-
-## 📦 Exported Assets
-
-* Notebooks
-* Pipeline
-* Lakehouse
-* Environment
-* Report
-
-✔️ Full project reproducibility
-
----
-
 ## 📌 Key Learnings
 
 * Implementing Medallion Architecture
@@ -228,32 +126,3 @@ Power BI dashboard built on top of Gold layer.
 * Building parameterized pipelines
 * Applying CI/CD in Fabric
 * Managing multi-environment deployment
-
----
-
-## ⚡ How to Run
-
-1. Import assets into **Dev workspace**
-2. Configure Lakehouse connections
-3. Run pipeline with parameters:
-
-   * Start Date
-   * End Date
-4. Validate in Test
-5. Deploy to Prod via Deployment Pipeline
-
----
-
-## 🚀 Future Improvements
-
-* Incremental loading strategy
-* Data quality framework
-* Monitoring & alerting
-* Git integration for version control
-
----
-
-## ⭐ Support
-
-If you found this project useful, give it a ⭐ on GitHub!
-
