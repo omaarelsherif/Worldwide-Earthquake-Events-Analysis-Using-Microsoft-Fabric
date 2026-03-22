@@ -1,6 +1,7 @@
 # Worldwide Earthquake Events Analysis Using Microsoft Fabric
 
 An end-to-end **Data Engineering project** built using **Microsoft Fabric**, implementing a full **Medallion Architecture (Bronze → Silver → Gold)** with **CI/CD using Fabric Deployment Pipelines**.
+<img src="Screenshots/Architecture.PNG"/>
 
 ---
 
@@ -40,11 +41,6 @@ This project ingests real-time earthquake data from the **USGS API**, processes 
  ┃ ┗ 📸 Deployment_pipeline.png
  ┗ 📜 README.md
 ```
-
----
-
-## 🧱 Architecture
-The below diagram shows project architecture
 
 ---
 
